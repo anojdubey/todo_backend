@@ -54,7 +54,7 @@ app.post("/", bodyParser.json(), function (req, res) {
   }).catch((err) => console.log(err));
 });
 
-app.put("/edittodo", bodyParser.json(), function (req, res) {
+app.put("/edit", bodyParser.json(), function (req, res) {
   const id = req.body.id;
   const todo = Todos.findByIdAndUpdate(id, {
     title: req.body.title,
